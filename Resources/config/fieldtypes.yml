@@ -11,3 +11,9 @@ services:
         public: false
         tags:
             - { name: ezpublish.fieldType.indexable, alias: ngclasslist }
+
+    Netgen\Bundle\ContentTypeListBundle\Core\FieldType\ContentTypeList\Mapper\FormMapper:
+        autowire: true
+        tags:
+            - { name: ez.fieldFormMapper.definition, fieldType: ngclasslist }
+            - { name: ez.fieldFormMapper.value, fieldType: ngclasslist }
